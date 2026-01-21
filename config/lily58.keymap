@@ -14,36 +14,24 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  ESC   |  1  |  2  |  3   |  4   |  5    |                   |  6    |  7    |  8   |  9  |   0  | PSCRN |
-// |  TAB   |  Q  |  W  |  E   |  R   |  T    |                   |  Y    |  U    |  I   |  O  |   P  | BSPC  |
-// |  SHIFT |  A  |  S  |  D   |  F   |  G    |                   |  H    |  J    |  K   |  L  |   ;  | RET   |
-// |  CTRL  |  Z  |  X  |  C   |  V   |  B    |  LEFT  |  | RIGHT |  N    |  M    |  ,   |  .  |   /  | SHIFT |
-//                      | ALT  | GUI  | LOWER |  SPACE |  | ALTGR | RAISE | DOWN  |  UP  |
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                            &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp PSCRN
-&kp TAB    &kp Q   &kp W   &kp E    &kp R    &kp T                             &kp Y   &kp U     &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp A   &kp S   &kp D    &kp F    &kp G                             &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp RET
-&kp LCTRL  &kp Z   &kp X   &kp C    &kp V    &kp B     &kp LEFT     &kp RIGHT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LGUI &mo 1    &kp LALT  &kp SPACE    &kp RALT   &mo 1   &kp DOWN  &kp UP
+&kp ESC    &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                            &kp N6    &kp N7    &kp N8     &kp N9   &kp N0    &kp F12
+&kp TAB    &kp Q   &kp W   &kp E    &kp R    &kp T                             &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp A   &kp S   &kp D    &kp F    &kp G                             &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp RET
+&kp LCTRL  &kp Z   &kp X   &kp C    &kp V    &kp B     &kp LEFT     &kp RIGHT  &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
+                           &kp LGUI &mo 1    &kp LALT  &kp SPACE    &kp RSHFT  &kp RALT  &kp DOWN  &kp UP
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
-//                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-&kp F1         &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&trans         &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans    &trans    &trans    &trans
-&trans         &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans    &trans    &trans    &trans
-&trans         &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                                                  &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
+&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                            &kp F7            &kp F8             &kp F9             &kp F10   &kp F11   &kp F12
+&CAPS      &trans  &trans  &trans   &trans   &trans                            &trans            &trans             &trans             &trans    &trans    &trans
+&trans     &trans  &trans  &trans   &trans   &trans                            &trans            &trans             &trans             &trans    &trans    &trans
+&trans     &trans  &trans  &trans   &trans   &trans    &trans       &trans     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans    &trans    &trans
+                                                       &trans       &trans     &trans            &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
